@@ -75,11 +75,11 @@ class PeopleView: UIViewController {
 
 		super.viewDidAppear(animated)
 
-		if (AuthUser.userId() != "") {
+		/*if (AuthUser.userId() != "") {
 			if (Persons.fullname() != "") {
 
 			} else { Users.onboard(target: self) }
-		} else { Users.login(target: self) }
+		} else { Users.login(target: self) }*/
 	}
 
 	// MARK: - Realm methods

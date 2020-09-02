@@ -64,11 +64,11 @@ class SettingsView: UITableViewController {
 
 		super.viewDidAppear(animated)
 
-		if (AuthUser.userId() != "") {
+		/*if (AuthUser.userId() != "") {
 			if (Persons.fullname() != "") {
 				loadPerson()
 			} else { Users.onboard(target: self) }
-		} else { Users.login(target: self) }
+		} else { Users.login(target: self) }*/
 	}
 
 	// MARK: - Realm methods

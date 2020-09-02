@@ -66,11 +66,11 @@ class ChatsView: UIViewController {
 
 		super.viewDidAppear(animated)
 
-		if (AuthUser.userId() != "") {
+		/*if (AuthUser.userId() != "") {
 			if (Persons.fullname() != "") {
 
 			} else { Users.onboard(target: self) }
-		} else { Users.login(target: self) }
+		} else { Users.login(target: self) }*/
 	}
 
 	// MARK: - Realm methods
@@ -318,7 +318,8 @@ extension ChatsView: UITableViewDataSource {
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-		return chats.count
+		//return chats.count
+        return 50
 	}
 
 	//---------------------------------------------------------------------------------------------------------------------------------------------
@@ -326,9 +327,9 @@ extension ChatsView: UITableViewDataSource {
 
 		let cell = tableView.dequeueReusableCell(withIdentifier: "ChatsCell", for: indexPath) as! ChatsCell
 
-		let chat = chats[indexPath.row]
+		/*let chat = chats[indexPath.row]
 		cell.bindData(chat: chat)
-		cell.loadImage(chat: chat, tableView: tableView, indexPath: indexPath)
+		cell.loadImage(chat: chat, tableView: tableView, indexPath: indexPath)*/
 
 		return cell
 	}
@@ -368,14 +369,14 @@ extension ChatsView: UITableViewDelegate {
 
 		tableView.deselectRow(at: indexPath, animated: true)
 
-		let chat = chats[indexPath.row]
-
+		/*let chat = chats[indexPath.row]
 		if (chat.isGroup) {
 			actionChatGroup(chatId: chat.objectId)
 		}
 		if (chat.isPrivate) {
 			actionChatPrivate(chatId: chat.objectId, recipientId: chat.userId)
-		}
+		}*/
+        actionChatGroup(chatId: "123")
 	}
 }
 
